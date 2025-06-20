@@ -47,9 +47,7 @@ RUN \
 
 # Generate and install favicons.
 RUN \
-    APP_ICON_URL=https://gitlab.com/tinyMediaManager/tinyMediaManager/raw/45f9c702615a55725a508523b0524166b188ff75/AppBundler/tmm.png && \
-    install_app_icon.sh "$APP_ICON_URL"
-
+    APP_ICON_URL=https://gitlab.com/tinyMediaManager/tinyMediaManager/raw/45f9c702615a55725a508523b0524166b188ff75/AppBundler/tmm.png
 
 # Install Chinese fonts
 RUN wget -O /tmp/font.tar.gz http://downloads.sourceforge.net/wqy/wqy-zenhei-0.9.45.tar.gz && \
