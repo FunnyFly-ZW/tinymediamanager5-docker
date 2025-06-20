@@ -17,6 +17,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Pull and push image
         run: |
-          docker pull dzhuang/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }}
-          docker tag dzhuang/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }} ${{ secrets.DOCKERHUB_USERNAME }}/tinymediamanager:latest-v5
-          docker push dzhuang/tinymediamanager:latest-v5
+          docker pull funnyfly/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }}
+          docker tag funnyfly/tinymediamanager:${{ github.event.inputs.toBeTagAsLatestV5 }} ${{ secrets.DOCKERHUB_USERNAME }}/tinymediamanager:latest-v5
+          docker push funnyfly/tinymediamanager:latest-v5

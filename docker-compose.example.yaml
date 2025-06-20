@@ -2,7 +2,7 @@ version: '3'
 
 services:
   tinymediamanager_service:
-    image: dzhuang/tinymediamanager:latest-v5
+    image: funnyfly/tinymediamanager:latest-v5
     container_name: tinymediamanager-v5
     ports:
       - 5800:5800
@@ -14,7 +14,7 @@ services:
     environment:
       GROUP_ID: 1000
       USER_ID: 0
-      TZ: Asia/Hong_Kong
+      TZ: Asia/Shanghai
 
   # Enable image/container auto update
   watchtower:

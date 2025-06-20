@@ -1,10 +1,10 @@
 #
 # TinyMediaManager Dockerfile
 #
-FROM jlesage/baseimage-gui:alpine-3.12-glibc
+FROM jlesage/baseimage-gui:alpine-3.21-v4.7
 
 # Define software versions.
-ARG TMM_VERSION=5.0
+ARG TMM_VERSION=5.1.7
 
 # Define software download URLs.
 ARG TMM_URL=https://release.tinymediamanager.org/v5/dist/tinyMediaManager-${TMM_VERSION}-linux-amd64.tar.xz
@@ -24,11 +24,11 @@ RUN \
         libmediainfo \
         ttf-dejavu \
         bash \
-	    zenity \
+        zenity \
         tar \
       	zstd \
-      fontconfig \
-      ttf-dejavu
+        fontconfig \
+        ttf-dejavu
 
 
 # Fix Java Segmentation Fault
@@ -76,5 +76,5 @@ LABEL \
       org.label-schema.name="tinymediamanager" \
       org.label-schema.description="Docker container for TinyMediaManager" \
       org.label-schema.version="unknown" \
-      org.label-schema.vcs-url="https://github.com/dzhuang/tinymediamanager5-docker" \
+      org.label-schema.vcs-url="https://github.com/FunnyFly-ZW/tinymediamanager5-docker" \
       org.label-schema.schema-version="1.0"
