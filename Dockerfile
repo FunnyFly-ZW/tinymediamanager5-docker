@@ -38,9 +38,9 @@ RUN apk add --no-cache zlib && \
 # Generate and install favicons.
 # Note: Commented out as the GitLab URL may be inaccessible or cause build failures.
 # If you need a custom icon, uncomment and update the URL to a reliable source.
-# RUN \
-#     APP_ICON_URL=https://gitlab.com/tinyMediaManager/tinyMediaManager/raw/45f9c702615a55725a508523b0524166b188ff75/AppBundler/tmm.png && \
-#     install_app_icon.sh "$APP_ICON_URL"
+RUN \
+    APP_ICON_URL=https://github.com/FunnyFly-ZW/tinymediamanager5-docker/blob/b39af01ae4682ac549a475353a3c67b5a1688d3e/resource/tmm.png && \
+    install_app_icon.sh "$APP_ICON_URL"
 
 
 # Install Chinese fonts
