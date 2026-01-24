@@ -38,20 +38,9 @@ RUN apk add --no-cache zlib && \
 # Generate and install favicons.
 # Note: Commented out as the GitLab URL may be inaccessible or cause build failures.
 # If you need a custom icon, uncomment and update the URL to a reliable source.
-#RUN \
-#    APP_ICON_URL=https://raw.githubusercontent.com/FunnyFly-ZW/tinymediamanager5-docker/main/assets/tmm.png && \
-#    install_app_icon.sh "$APP_ICON_URL"
-
-# Copy icon into container
-COPY assets/tmm.png /tmp/tmm.png
-
-# Get latest install_app_icon.sh
-#RUN wget -q -O /tmp/install_app_icon.sh \
-#    https://github.com/jlesage/docker-baseimage-gui/raw/refs/heads/master/helpers/install_app_icon.sh && \
-#    chmod +x /tmp/install_app_icon.sh
-
-# Generate and install favicons (offline, stable)
-RUN install_app_icon.sh /tmp/tmm.png
+RUN \
+    APP_ICON_URL=https://raw.githubusercontent.com/FunnyFly-ZW/tinymediamanager5-docker/main/assets/tmm.png && \
+    install_app_icon.sh "$APP_ICON_URL"
 
 # Install Chinese fonts
 RUN wget -O /tmp/font.tar.gz http://downloads.sourceforge.net/wqy/wqy-zenhei-0.9.45.tar.gz && \
