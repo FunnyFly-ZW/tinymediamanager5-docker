@@ -39,7 +39,7 @@ RUN apk add --no-cache zlib && \
 # Note: Commented out as the GitLab URL may be inaccessible or cause build failures.
 # If you need a custom icon, uncomment and update the URL to a reliable source.
 RUN \
-    APP_ICON_URL=https://github.com/FunnyFly-ZW/tinymediamanager5-docker/blob/b39af01ae4682ac549a475353a3c67b5a1688d3e/resource/tmm.png && \
+    APP_ICON_URL=https://raw.githubusercontent.com/FunnyFly-ZW/tinymediamanager5-docker/main/assets/tmm.png && \
     install_app_icon.sh "$APP_ICON_URL"
 
 
