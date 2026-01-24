@@ -46,12 +46,12 @@ RUN apk add --no-cache zlib && \
 COPY assets/tmm.png /tmp/tmm.png
 
 # Get latest install_app_icon.sh
-RUN wget -q -O /tmp/install_app_icon.sh \
-    https://github.com/jlesage/docker-baseimage-gui/raw/refs/heads/master/helpers/install_app_icon.sh && \
-    chmod +x /tmp/install_app_icon.sh
+#RUN wget -q -O /tmp/install_app_icon.sh \
+#    https://github.com/jlesage/docker-baseimage-gui/raw/refs/heads/master/helpers/install_app_icon.sh && \
+#    chmod +x /tmp/install_app_icon.sh
 
 # Generate and install favicons (offline, stable)
-RUN /tmp/install_app_icon.sh /tmp/tmm.png
+RUN install_app_icon.sh /tmp/tmm.png
 
 # Install Chinese fonts
 RUN wget -O /tmp/font.tar.gz http://downloads.sourceforge.net/wqy/wqy-zenhei-0.9.45.tar.gz && \
