@@ -5,6 +5,7 @@ on:
       toBeTagAsLatestV5:
         description: 'The image tag which will be tag as latest-v5'
         required: true
+        default: '5.x'
 
 jobs:
   build:

@@ -5,7 +5,7 @@ on:
       tmmVersion:
         description: 'Version of tmm.jar'
         required: true
-        default: '5.0'
+        default: '5.x'
 
 jobs:
   build:
